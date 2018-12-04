@@ -11,23 +11,33 @@ public class SearchPage extends JPanel
 
 	private void setUpSearchWindow() 
 	{
-		Container contentPaneUpper;//contentPaneLower;
-		
-		setSize(500,500);
-		
-		contentPaneUpper = new Container();
+		//Upper Layout//
+		Container contentPaneUpper = new Container();
 		contentPaneUpper.setLayout(new BorderLayout(10,10));
 		
-		//contentPaneLower = getContentPane();
-		this.setLayout(new GridLayout(2,1,10,10));
-		
+		//add Search bar
 		SearchBar S_BAR = new SearchBar();
 		contentPaneUpper.add(S_BAR,BorderLayout.NORTH);
-		contentPaneUpper.add(new JTextArea(),BorderLayout.CENTER);
-		contentPaneUpper.add(new JLabel("0 Files Found"),BorderLayout.SOUTH); 
 		
-		this.add(contentPaneUpper);//,BorderLayout.NORTH);
-		this.add(new JTextField());//,BorderLayout.SOUTH);
+		//add Search result Display
+		JTextArea searchResults = new JTextArea();
+		searchResults.setEditable(false);
+		contentPaneUpper.add(searchResults,BorderLayout.CENTER);
+		
+		//add search result count
+		contentPaneUpper.add(new JLabel("0 Files Found"),BorderLayout.SOUTH);
+		
+		
+		
+		//Lower Layout//
+			//file contents used to display selected files contents
+		JTextArea fileContents = new JTextArea();
+		fileContents.setEditable(false);
+		
+		//Full page layout//
+		this.setLayout(new GridLayout(2,1,10,10));
+		this.add(contentPaneUpper);
+		this.add(fileContents);
 		
 		
 	}

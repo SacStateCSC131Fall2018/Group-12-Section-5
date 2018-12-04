@@ -2,6 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
+//this class will be used to build the main frame for the tabs 
 public class MainFrame	extends JFrame 
 {
 	MainFrame()
