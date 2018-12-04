@@ -1,6 +1,8 @@
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import java.awt.event.ActionListener;
+
 
 //this class will be used to build the main frame for the tabs 
 public class MainFrame	extends JFrame 
@@ -17,22 +19,46 @@ public class MainFrame	extends JFrame
 
 	private void setUpMainFrame() 
 	{
-		this.setTitle("Pirex");
+		
+		JTabbedPane tabbedPane = new JTabbedPane();
 		Container contentPane = this.getContentPane();
 		
 		
-		//Search For Documents Page
+		//Search Page card
+		SearchPage card1_SearchDocuments = new SearchPage();
+		
+		//load Documents card
+		//will impliment later
+		JButton card2_LoadDocuments = new JButton();
+		
+		//summarize Documents
+		//needs to be implemented
+		JButton card3_SummDocuments = new JButton();
+		
+		tabbedPane.add("Search for Documents",card1_SearchDocuments);
+		tabbedPane.add("Load Documents",card2_LoadDocuments);
+		tabbedPane.add("Summarize Documents",card3_SummDocuments);
+		this.add(tabbedPane);
+		
+		/*
+		this.setTitle("Pirex");
+		Container contentPane = this.getContentPane();
+		
+		//listens for tab presses
+		lowerDisplay myDisplay = new lowerDisplay();
 		
 		contentPane.setLayout(new BorderLayout());
-		SearchPage mySPage = new SearchPage();
-		mySPage.setBorder(new EmptyBorder(0,10,10,10));
-		contentPane.add(mySPage, BorderLayout.CENTER);
-		contentPane.add(new pageOptions(),BorderLayout.NORTH);
+		
+		myDisplay.setBorder(new EmptyBorder(0,10,10,10));
+		contentPane.add(myDisplay, BorderLayout.CENTER);
+		contentPane.add(new pageOptions(myDisplay),BorderLayout.NORTH);
 		
 		//Load Documents Page
 		
 		
 		//Summarize Documents Page
+		*/
+		
 		
 	}
 }

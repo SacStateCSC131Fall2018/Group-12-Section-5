@@ -1,13 +1,18 @@
 import java.awt.*;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 public class SearchBar extends JPanel 
 {
+	//private ActionListener listener;
+	
 	//constructor
-	public SearchBar() 
+	public SearchBar(/*ActionListener listen*/) 
 	{
 		super();
+		//listener = listen;
 		setupSearchBar("Query: ","Clear");
 	}
 
@@ -21,10 +26,12 @@ public class SearchBar extends JPanel
 		
 		//Clear button needs to be able implemented 
 		JButton B_CLEAR = new JButton(buttonName);
+		//B_CLEAR.addActionListener(listener);
 		this.add(B_CLEAR, BorderLayout.EAST);
 
 		//Text field
 		JTextField T_SEARCH = new JTextField();
+		//T_SEARCH.addActionListener(listener);
 		this.add(T_SEARCH, BorderLayout.CENTER);
 		
 		//Query label
