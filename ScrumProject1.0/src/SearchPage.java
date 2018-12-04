@@ -34,10 +34,14 @@ public class SearchPage extends JPanel
 		JTextArea fileContents = new JTextArea();
 		fileContents.setEditable(false);
 		
+		//Make text Scrollable
+		JScrollPane fileContentsScroll = new JScrollPane(fileContents);
+		fileContentsScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);;
+		
 		//Full page layout//
 		this.setLayout(new GridLayout(2,1,10,10));
 		this.add(contentPaneUpper);
-		this.add(fileContents);
+		this.add(fileContentsScroll);
 		
 		
 	}
