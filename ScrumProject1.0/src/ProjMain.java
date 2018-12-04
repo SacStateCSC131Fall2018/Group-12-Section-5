@@ -8,6 +8,5 @@ public class ProjMain {
 		mypage.setSize(800,800);
 		mypage.setVisible(true);
 		
-		
 	}
 }
