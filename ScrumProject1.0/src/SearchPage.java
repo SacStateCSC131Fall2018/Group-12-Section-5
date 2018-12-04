@@ -11,6 +11,8 @@ public class SearchPage extends JPanel
 
 	private void setUpSearchWindow() 
 	{
+
+		
 		//Upper Layout//
 		Container contentPaneUpper = new Container();
 		contentPaneUpper.setLayout(new BorderLayout(10,10));
@@ -25,7 +27,8 @@ public class SearchPage extends JPanel
 		contentPaneUpper.add(searchResults,BorderLayout.CENTER);
 		
 		//add search result count
-		contentPaneUpper.add(new JLabel("0 Files Found"),BorderLayout.SOUTH);
+		JLabel numberOfResults = new JLabel("0 Files Found");
+		contentPaneUpper.add(numberOfResults,BorderLayout.SOUTH);
 		
 		
 		
