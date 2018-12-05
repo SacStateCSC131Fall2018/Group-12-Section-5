@@ -17,6 +17,7 @@ public class SummPage extends JPanel {
 
 	//Make text Scrollable
 	JScrollPane summeryPageSumm = new JScrollPane(fileContents);
+	summeryPageSumm.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 	summeryPageSumm.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 	this.add(summeryPageSumm);
 	}
