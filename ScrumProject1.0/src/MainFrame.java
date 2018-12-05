@@ -33,7 +33,7 @@ public class MainFrame	extends JFrame
 		LoadPage card2_LoadDocuments = new LoadPage();
 		
 		//summarize Documents
-		JButton card3_SummDocuments = new JButton("Space holder Need to implement");
+		SummPage card3_SummDocuments = new SummPage();
 		
 		tabbedPane.add("Search for Documents",card1_SearchDocuments);
 		tabbedPane.add("Load Documents",card2_LoadDocuments);
