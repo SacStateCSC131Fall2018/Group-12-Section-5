@@ -20,6 +20,7 @@ public class MainFrame	extends JFrame
 		setUpMainFrame();
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setFont(new Font("serif", Font.PLAIN, 30));
+		//setUpMenu(this);
 	}
 	
 	
@@ -68,6 +69,38 @@ public class MainFrame	extends JFrame
 	
 	private void setUpMenu(JFrame frame)
 	{
-		Menu menu = new Menu(frame);
+		//Menu menu = new Menu(frame);
+		//Container c1 = new Container();
+		//c1.add(menu);
+		//frame.add(c1);
+		
+		JMenuBar menuBar = new JMenuBar();
+
+		// Edit Menu
+		JMenu editMenu = new JMenu("File");    
+		menuBar.add(editMenu);
+		
+			JMenuItem item = new JMenuItem("New");
+			editMenu.add(item);
+			editMenu.addSeparator();
+			
+			JMenuItem item2 = new JMenuItem("Open");
+			editMenu.add(item2);
+			editMenu.addSeparator();
+			
+		
+			menuBar.add(editMenu);
+
+		
+		
+		
+		
+		JMenu editMenu2 = new JMenu("Edit");
+		menuBar.add(editMenu2);
+		
+		JMenu editMenu3 = new JMenu("Options");
+		menuBar.add(editMenu3);
+		
+		frame.setJMenuBar(menuBar);
 	}
 }
