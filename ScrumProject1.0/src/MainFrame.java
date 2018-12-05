@@ -74,14 +74,13 @@ public class MainFrame	extends JFrame
 
 		JMenu fileMenu = new JMenu("File");    
 		
-			JMenuItem item = new JMenuItem("New");
-			fileMenu.add(item);
-			fileMenu.addSeparator();
-			
 			JMenuItem item2 = new JMenuItem("Open");
 			fileMenu.add(item2);
 			fileMenu.addSeparator();
 			
+		
+			JMenuItem item = new JMenuItem("Export");
+			fileMenu.add(item);
 			menuBar.add(fileMenu);
 
 		
@@ -89,7 +88,9 @@ public class MainFrame	extends JFrame
 		menuBar.add(editMenu);
 		
 		JMenu optionsMenu = new JMenu("Options");
-		menuBar.add(optionsMenu);
+			
+			JMenuItem item3 = new JMenuItem("Sources");
+					menuBar.add(optionsMenu);
 		
 		frame.setJMenuBar(menuBar);
 	}
