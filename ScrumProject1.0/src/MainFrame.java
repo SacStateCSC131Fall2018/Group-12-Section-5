@@ -2,6 +2,7 @@ import java.awt.*;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -45,7 +46,9 @@ public class MainFrame	extends JFrame
 	{
 		setUpIcon(this);
 		
+		//tabbed pane for the 3 pages Search load and summarize
 		JTabbedPane tabbedPane = new JTabbedPane();
+		
 		Container contentPane = this.getContentPane();
 		
 		//Search Page card
@@ -58,6 +61,9 @@ public class MainFrame	extends JFrame
 		//summarize Documents
 		SummPage card3_SummDocuments = new SummPage();
 		
+		
+		
+		tabbedPane.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		tabbedPane.add("Search for Documents",card1_SearchDocuments);
 		tabbedPane.add("Load Documents",card2_LoadDocuments);
 		tabbedPane.add("Summarize Documents",card3_SummDocuments);
@@ -94,4 +100,5 @@ public class MainFrame	extends JFrame
 		
 		frame.setJMenuBar(menuBar);
 	}
+	
 }
