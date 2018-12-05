@@ -77,29 +77,28 @@ public class MainFrame	extends JFrame
 		JMenuBar menuBar = new JMenuBar();
 
 		// Edit Menu
-		JMenu editMenu = new JMenu("File");    
-		menuBar.add(editMenu);
+		JMenu fileMenu = new JMenu("File");    
 		
 			JMenuItem item = new JMenuItem("New");
-			editMenu.add(item);
-			editMenu.addSeparator();
+			fileMenu.add(item);
+			fileMenu.addSeparator();
 			
 			JMenuItem item2 = new JMenuItem("Open");
-			editMenu.add(item2);
-			editMenu.addSeparator();
+			fileMenu.add(item2);
+			fileMenu.addSeparator();
 			
 		
-			menuBar.add(editMenu);
+			menuBar.add(fileMenu);
 
 		
 		
 		
 		
-		JMenu editMenu2 = new JMenu("Edit");
-		menuBar.add(editMenu2);
+		JMenu editMenu = new JMenu("Edit");
+		menuBar.add(editMenu);
 		
-		JMenu editMenu3 = new JMenu("Options");
-		menuBar.add(editMenu3);
+		JMenu optionsMenu = new JMenu("Options");
+		menuBar.add(optionsMenu);
 		
 		frame.setJMenuBar(menuBar);
 	}
