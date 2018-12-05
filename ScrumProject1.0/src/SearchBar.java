@@ -11,7 +11,7 @@ public class SearchBar extends JPanel
 	public SearchBar() 
 	{
 		super();
-		setupSearchBar("Query: ","Clear");
+		setupSearchBar("Query: ", "Search", "Clear");
 	}
 	public SearchBar(String Name, String Button) 
 	{
