@@ -69,14 +69,9 @@ public class MainFrame	extends JFrame
 	
 	private void setUpMenu(JFrame frame)
 	{
-		//Menu menu = new Menu(frame);
-		//Container c1 = new Container();
-		//c1.add(menu);
-		//frame.add(c1);
 		
 		JMenuBar menuBar = new JMenuBar();
 
-		// Edit Menu
 		JMenu fileMenu = new JMenu("File");    
 		
 			JMenuItem item = new JMenuItem("New");
@@ -87,12 +82,8 @@ public class MainFrame	extends JFrame
 			fileMenu.add(item2);
 			fileMenu.addSeparator();
 			
-		
 			menuBar.add(fileMenu);
 
-		
-		
-		
 		
 		JMenu editMenu = new JMenu("Edit");
 		menuBar.add(editMenu);
