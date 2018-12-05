@@ -6,20 +6,20 @@ import javax.swing.border.EmptyBorder;
 
 public class SearchBar extends JPanel 
 {
-	
+	private ActionListener listener;
 	//constructor
 	public SearchBar() 
 	{
 		super();
-		setupSearchBar("Query: ", "Search", "Clear");
+		setupSearchBar("Query: ", "Clear");
 	}
-	public SearchBar(String Name, String Button) 
+	public SearchBar(String Name, String ButtonToClear) 
 	{
 		super();
-		setupSearchBar(Name,Button);
+		setupSearchBar(Name,ButtonToClear);
 	}
 
-	private void setupSearchBar(String searchName,String buttonName) 
+	private void setupSearchBar(String searchName,String ButtonToClear ) 
 	{
 
 		
@@ -28,8 +28,8 @@ public class SearchBar extends JPanel
 		this.setBorder(BorderFactory.createEmptyBorder(20, 10, 10, 10));
 		
 		//Clear button needs to be able implemented 
-		JButton B_CLEAR = new JButton(buttonName);
-		//B_CLEAR.addActionListener(listener);
+		JButton B_CLEAR = new JButton(ButtonToClear);
+		B_CLEAR.addActionListener(listener);
 		this.add(B_CLEAR, BorderLayout.EAST);
 
 		//Text field
