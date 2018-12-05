@@ -10,7 +10,6 @@ public class SummPage extends JPanel {
 	}
 	public void setupSummPage()
 	{
-	
 	this.setLayout(new BorderLayout(10,10));
 	JTextArea fileContents = new JTextArea();
 	fileContents.setEditable(false);
