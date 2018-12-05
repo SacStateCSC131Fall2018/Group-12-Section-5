@@ -1,4 +1,4 @@
-//This class us used to create an Opus Object
+//This class is used to create an Opus Object
 //Stores the author name the book title and the ordinal number
 
 public class OpusDocumentDetails {

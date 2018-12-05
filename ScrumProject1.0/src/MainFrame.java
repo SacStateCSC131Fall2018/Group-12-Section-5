@@ -91,12 +91,27 @@ public class MainFrame	extends JFrame
 
 		
 		JMenu editMenu = new JMenu("Edit");
+		
+			JMenu authorSubMenu = new JMenu("Author");
+				JMenuItem item3 = new JMenuItem("Name");
+				authorSubMenu.add(item3);
+				
+			JMenu opusSubmenu = new JMenu("Opus");
+				JMenuItem item4 = new JMenuItem("Add opus");
+				opusSubmenu.add(item4);
+				JMenuItem item5 = new JMenuItem("Remove opus");
+				opusSubmenu.add(item5);
+			
+			editMenu.add(authorSubMenu);
+			editMenu.add(opusSubmenu);
 		menuBar.add(editMenu);
 		
+		
 		JMenu optionsMenu = new JMenu("Options");
-			
-			JMenuItem item3 = new JMenuItem("Sources");
-					menuBar.add(optionsMenu);
+			JMenuItem item6 = new JMenuItem("Sources");
+			optionsMenu.add(item6);
+		menuBar.add(optionsMenu);
+		
 		
 		frame.setJMenuBar(menuBar);
 	}
