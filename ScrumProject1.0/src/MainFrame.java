@@ -69,7 +69,7 @@ public class MainFrame	extends JFrame
 	
 	private void setUpMenu(JFrame frame)
 	{
-		
+		//
 		JMenuBar menuBar = new JMenuBar();
 
 		JMenu fileMenu = new JMenu("File");    
