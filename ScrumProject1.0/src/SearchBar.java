@@ -6,14 +6,17 @@ import javax.swing.border.EmptyBorder;
 
 public class SearchBar extends JPanel 
 {
-	//private ActionListener listener;
 	
 	//constructor
-	public SearchBar(/*ActionListener listen*/) 
+	public SearchBar() 
 	{
 		super();
-		//listener = listen;
 		setupSearchBar("Query: ","Clear");
+	}
+	public SearchBar(String Name, String Button) 
+	{
+		super();
+		setupSearchBar(Name,Button);
 	}
 
 	private void setupSearchBar(String searchName,String buttonName) 

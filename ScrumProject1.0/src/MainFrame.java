@@ -21,6 +21,7 @@ public class MainFrame	extends JFrame
 	{
 		
 		JTabbedPane tabbedPane = new JTabbedPane();
+		this.setTitle("Pirex");
 		Container contentPane = this.getContentPane();
 		
 		
@@ -28,36 +29,16 @@ public class MainFrame	extends JFrame
 		SearchPage card1_SearchDocuments = new SearchPage();
 		
 		//load Documents card
-		//will impliment later
-		JButton card2_LoadDocuments = new JButton();
+		//will implement later
+		LoadPage card2_LoadDocuments = new LoadPage();
 		
 		//summarize Documents
-		//needs to be implemented
-		JButton card3_SummDocuments = new JButton();
+		JButton card3_SummDocuments = new JButton("Space holder Need to implement");
 		
 		tabbedPane.add("Search for Documents",card1_SearchDocuments);
 		tabbedPane.add("Load Documents",card2_LoadDocuments);
 		tabbedPane.add("Summarize Documents",card3_SummDocuments);
-		this.add(tabbedPane);
-		
-		/*
-		this.setTitle("Pirex");
-		Container contentPane = this.getContentPane();
-		
-		//listens for tab presses
-		lowerDisplay myDisplay = new lowerDisplay();
-		
-		contentPane.setLayout(new BorderLayout());
-		
-		myDisplay.setBorder(new EmptyBorder(0,10,10,10));
-		contentPane.add(myDisplay, BorderLayout.CENTER);
-		contentPane.add(new pageOptions(myDisplay),BorderLayout.NORTH);
-		
-		//Load Documents Page
-		
-		
-		//Summarize Documents Page
-		*/
+		contentPane.add(tabbedPane);
 		
 		
 	}
