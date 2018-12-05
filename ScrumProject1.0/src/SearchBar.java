@@ -30,7 +30,7 @@ public class SearchBar extends JPanel
 		
 		//Clear button needs to be able implemented 
 		JButton B_CLEAR = new JButton(ButtonToClear);
-		B_CLEAR.addActionListener(listener);
+		//B_CLEAR.addActionListener(listener);
 		this.add(B_CLEAR, BorderLayout.EAST);
 
 		//Text field
