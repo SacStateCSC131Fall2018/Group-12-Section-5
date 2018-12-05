@@ -20,6 +20,7 @@ public class MainFrame	extends JFrame
 		setUpMainFrame();
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setFont(new Font("serif", Font.PLAIN, 30));
+		//setUpMenu(this);
 	}
 	
 	
@@ -62,6 +63,34 @@ public class MainFrame	extends JFrame
 		tabbedPane.add("Summarize Documents",card3_SummDocuments);
 		contentPane.add(tabbedPane);
 		
+		setUpMenu(this);
 		
+	}
+	
+	private void setUpMenu(JFrame frame)
+	{
+		//
+		JMenuBar menuBar = new JMenuBar();
+
+		JMenu fileMenu = new JMenu("File");    
+		
+			JMenuItem item = new JMenuItem("New");
+			fileMenu.add(item);
+			fileMenu.addSeparator();
+			
+			JMenuItem item2 = new JMenuItem("Open");
+			fileMenu.add(item2);
+			fileMenu.addSeparator();
+			
+			menuBar.add(fileMenu);
+
+		
+		JMenu editMenu = new JMenu("Edit");
+		menuBar.add(editMenu);
+		
+		JMenu optionsMenu = new JMenu("Options");
+		menuBar.add(optionsMenu);
+		
+		frame.setJMenuBar(menuBar);
 	}
 }
