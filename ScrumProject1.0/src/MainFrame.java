@@ -14,7 +14,6 @@ import java.io.IOException;
 public class MainFrame	extends JFrame 
 {
 	
-	
 	MainFrame()
 	{
 		super();
