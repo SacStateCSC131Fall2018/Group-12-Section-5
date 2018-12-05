@@ -7,6 +7,7 @@ import javax.swing.border.EmptyBorder;
 public class SearchBar extends JPanel 
 {
 	private ActionListener listener;
+	
 	//constructor
 	public SearchBar() 
 	{
@@ -34,9 +35,9 @@ public class SearchBar extends JPanel
 
 		//Text field
 		JTextField T_SEARCH = new JTextField();
-		//T_SEARCH.addActionListener(listener);
+		T_SEARCH.addActionListener(listener);
 		this.add(T_SEARCH, BorderLayout.CENTER);
-		
+
 		//Query label
 		JLabel T_DISPLAY = new JLabel(searchName);
 		this.add(T_DISPLAY, BorderLayout.WEST);
