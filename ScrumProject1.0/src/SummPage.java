@@ -2,7 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 
 public class SummPage extends JPanel {
-	// this is the constructor for the summary page
+	// This is the constructor for the summary page
 	public SummPage() 
 	{
 		super();
