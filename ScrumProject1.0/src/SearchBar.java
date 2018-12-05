@@ -1,5 +1,6 @@
 import java.awt.*;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
+import java.util.jar.Attributes.Name;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -7,7 +8,7 @@ import javax.swing.border.EmptyBorder;
 public class SearchBar extends JPanel 
 {
 	private ActionListener listener;
-	
+
 	//constructor
 	public SearchBar() 
 	{
@@ -28,15 +29,24 @@ public class SearchBar extends JPanel
 		this.setLayout(new BorderLayout(20,20));
 		this.setBorder(BorderFactory.createEmptyBorder(20, 10, 10, 10));
 		
+		//Text field
+			JTextField T_SEARCH = new JTextField();
+			T_SEARCH.addActionListener(listener);
+			this.add(T_SEARCH, BorderLayout.CENTER);
+				
+				
 		//Clear button needs to be able implemented 
 		JButton B_CLEAR = new JButton(ButtonToClear);
-		//B_CLEAR.addActionListener(listener);
 		this.add(B_CLEAR, BorderLayout.EAST);
+		B_CLEAR.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				T_SEARCH.setText("");
+			}
 
-		//Text field
-		JTextField T_SEARCH = new JTextField();
-		T_SEARCH.addActionListener(listener);
-		this.add(T_SEARCH, BorderLayout.CENTER);
+		});
+		
 
 		//Query label
 		JLabel T_DISPLAY = new JLabel(searchName);
