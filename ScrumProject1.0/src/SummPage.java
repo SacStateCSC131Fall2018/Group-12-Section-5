@@ -18,9 +18,11 @@ public class SummPage extends JPanel {
 	JScrollPane summeryPageSumm = new JScrollPane(fileContents); 
 	
 	// Modifies the scroll bar..
-	summeryPageSumm.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+	summeryPageSumm.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10), BorderFactory.createLineBorder(Color.black)));
 	summeryPageSumm.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+	this.setBorder(BorderFactory.createLineBorder(Color.black));
 	this.add(summeryPageSumm);
+
 	}
 }
  
