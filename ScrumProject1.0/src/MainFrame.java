@@ -2,6 +2,7 @@ import java.awt.*;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -20,6 +21,7 @@ public class MainFrame	extends JFrame
 		setUpMainFrame();
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setFont(new Font("serif", Font.PLAIN, 30));
+		//setUpMenu(this);
 	}
 	
 	
@@ -44,7 +46,9 @@ public class MainFrame	extends JFrame
 	{
 		setUpIcon(this);
 		
+		//tabbed pane for the 3 pages Search load and summarize
 		JTabbedPane tabbedPane = new JTabbedPane();
+		
 		Container contentPane = this.getContentPane();
 		
 		//Search Page card
@@ -57,6 +61,9 @@ public class MainFrame	extends JFrame
 		//summarize Documents
 		SummPage card3_SummDocuments = new SummPage();
 		
+		
+		
+		tabbedPane.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		tabbedPane.add("Search for Documents",card1_SearchDocuments);
 		tabbedPane.add("Load Documents",card2_LoadDocuments);
 		tabbedPane.add("Summarize Documents",card3_SummDocuments);
@@ -68,6 +75,30 @@ public class MainFrame	extends JFrame
 	
 	private void setUpMenu(JFrame frame)
 	{
-		Menu menu = new Menu(frame);
+		//This is the menu items and the JmenuItem is the submenu items
+		JMenuBar menuBar = new JMenuBar();
+
+		JMenu fileMenu = new JMenu("File");    
+		
+			JMenuItem item2 = new JMenuItem("Open");
+			fileMenu.add(item2);
+			fileMenu.addSeparator();
+			
+		
+			JMenuItem item = new JMenuItem("Export");
+			fileMenu.add(item);
+			menuBar.add(fileMenu);
+
+		
+		JMenu editMenu = new JMenu("Edit");
+		menuBar.add(editMenu);
+		
+		JMenu optionsMenu = new JMenu("Options");
+			
+			JMenuItem item3 = new JMenuItem("Sources");
+					menuBar.add(optionsMenu);
+		
+		frame.setJMenuBar(menuBar);
 	}
+	
 }
