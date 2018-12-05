@@ -9,16 +9,18 @@ public class SummPage extends JPanel {
 		setupSummPage();
 	}
 	public void setupSummPage()
-	{
-	//test4
-		
+	{	
 	this.setLayout(new BorderLayout(10,10));
 	JTextArea fileContents = new JTextArea();
 	fileContents.setEditable(false);
 
 	//Make text Scrollable
-	JScrollPane summeryPageSumm = new JScrollPane(fileContents);
+	JScrollPane summeryPageSumm = new JScrollPane(fileContents); 
+	
+	// Modifies the scroll bar..
+	summeryPageSumm.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 	summeryPageSumm.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 	this.add(summeryPageSumm);
 	}
 }
+ 
