@@ -5,7 +5,7 @@ public class LoadPage extends JPanel
 {
 	LoadPage()
 	{
-		//testasasd
+		
 		Container UpperSection = new Container();
 		UpperSection.setLayout(new GridLayout(3,1));
 		

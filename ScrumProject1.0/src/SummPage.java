@@ -10,7 +10,7 @@ public class SummPage extends JPanel {
 	}
 	public void setupSummPage()
 	{
-	//test line
+	//test
 		
 	this.setLayout(new BorderLayout(10,10));
 	JTextArea fileContents = new JTextArea();
