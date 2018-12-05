@@ -62,6 +62,12 @@ public class MainFrame	extends JFrame
 		tabbedPane.add("Summarize Documents",card3_SummDocuments);
 		contentPane.add(tabbedPane);
 		
+		setUpMenu(this);
 		
+	}
+	
+	private void setUpMenu(JFrame frame)
+	{
+		Menu menu = new Menu(frame);
 	}
 }
