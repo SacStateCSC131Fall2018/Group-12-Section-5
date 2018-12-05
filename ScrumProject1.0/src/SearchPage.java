@@ -1,5 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.border.Border;
 
 public class SearchPage extends JPanel 
 {
@@ -24,6 +25,8 @@ public class SearchPage extends JPanel
 		//add Search result Display
 		JTextArea searchResults = new JTextArea();
 		searchResults.setEditable(false);
+		searchResults.setBorder(BorderFactory.createLineBorder(Color.black));
+		
 		contentPaneUpper.add(searchResults,BorderLayout.CENTER);
 		
 		//add search result count
@@ -39,12 +42,17 @@ public class SearchPage extends JPanel
 		
 		//Make text Scrollable
 		JScrollPane fileContentsScroll = new JScrollPane(fileContents);
-		fileContentsScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);;
+		fileContentsScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		fileContentsScroll.setBorder(BorderFactory.createLoweredSoftBevelBorder());
 		
 		//Full page layout//
+		Border containerBorder = BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.black),BorderFactory.createEmptyBorder(0, 10, 10, 10));
+		//containerBorder.
 		this.setLayout(new GridLayout(2,1,10,10));
 		this.add(contentPaneUpper);
 		this.add(fileContentsScroll);
+		this.setBorder(containerBorder);
+
 		
 		
 	}
