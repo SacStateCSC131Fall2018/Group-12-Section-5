@@ -14,8 +14,9 @@ public class LoadPage extends JPanel
 		Container secondBar = new Container();
 		//Container secondBar = new Container();
 		
-<<<<<<< HEAD
+		
 		labeledText(secondBar,"Text File Type: ");
+		
 		
 		
 		UpperSection.add(new SearchBar("Text File: ", "Browse"));
@@ -24,7 +25,7 @@ public class LoadPage extends JPanel
 		
 		//UpperSection.add(new SearchBar("Text File: ", "Browse"));
 		//UpperSection.add(new SearchBar("Text File: ", "Browse"));
-=======
+
 	    UpperSection.add(new SearchBar("Text File: ", "Browse"));
 	  
 	    

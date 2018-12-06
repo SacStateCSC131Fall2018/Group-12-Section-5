@@ -40,7 +40,7 @@ public class MainFrame	extends JFrame
 		frame.setBackground(Color.blue);
 		frame.setTitle("PIREX");
 	}
-
+// These are the 3 tabs on the main frame.
 	private void setUpMainFrame() 
 	{
 		setUpIcon(this);
