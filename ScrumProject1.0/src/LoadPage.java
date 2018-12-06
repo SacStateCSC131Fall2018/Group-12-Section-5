@@ -14,6 +14,7 @@ public class LoadPage extends JPanel
 		Container secondBar = new Container();
 		//Container secondBar = new Container();
 		
+<<<<<<< HEAD
 		labeledText(secondBar,"Text File Type: ");
 		
 		
@@ -23,6 +24,30 @@ public class LoadPage extends JPanel
 		
 		//UpperSection.add(new SearchBar("Text File: ", "Browse"));
 		//UpperSection.add(new SearchBar("Text File: ", "Browse"));
+=======
+	    UpperSection.add(new SearchBar("Text File: ", "Browse"));
+	  
+	    
+	    Container pane = new Container();
+	    pane.setLayout(new BorderLayout(10,10));
+	    
+	    pane.add(new Button("Left"), BorderLayout.WEST);
+	    
+	    pane.add(new Button("Center"), BorderLayout.CENTER);
+	    
+	    
+	    UpperSection.add(pane);
+	    
+	    
+	    
+	    
+	    
+	    
+	    //UpperSection.setLayout(border); //border layout for the container
+	    //UpperSection.add(new testPanel, BorderLayout.CENTER);
+	  
+	//	UpperSection.add(new SearchBar("Text File: ", "Browse"));
+>>>>>>> branch 'master' of https://github.com/SacStateCSC131Fall2018/Group-12-Section-5.git
 		
 		this.setLayout(new BorderLayout());
 		this.add(UpperSection,BorderLayout.NORTH);
