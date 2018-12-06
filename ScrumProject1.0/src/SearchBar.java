@@ -21,7 +21,7 @@ public class SearchBar extends JPanel
 		setupSearchBar(Name,ButtonToClear);
 	}
 
-	private void setupSearchBar(String searchName,String ButtonToClear ) 
+	private void setupSearchBar(String searchName,String myButton ) 
 	{
 
 		
@@ -36,16 +36,17 @@ public class SearchBar extends JPanel
 				
 				
 		//Clear button needs to be able implemented 
-		JButton B_CLEAR = new JButton(ButtonToClear);
+		JButton B_CLEAR = new JButton(myButton);
 		this.add(B_CLEAR, BorderLayout.EAST);
 		B_CLEAR.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				T_SEARCH.setText("");
+				if(e.getActionCommand() == "Clear")
+					T_SEARCH.setText("");
 			}
 
-		});
+	});
 		
 
 		//Query label
