@@ -31,7 +31,7 @@ public class SearchBar extends JPanel
 
 		
 		//initiate the search bar layout 
-		this.setLayout(new BorderLayout(20,20));
+		this.setLayout(new BorderLayout(10,10));
 		this.setBorder(BorderFactory.createEmptyBorder(20, 10, 10, 10));
 		
 		//Text field
@@ -65,7 +65,7 @@ public class SearchBar extends JPanel
 
 		
 		//initiate the search bar layout 
-		this.setLayout(new BorderLayout(20,20));
+		this.setLayout(new BorderLayout(10,10));
 		this.setBorder(BorderFactory.createEmptyBorder(20, 10, 10, 10));
 		
 		//Text field
