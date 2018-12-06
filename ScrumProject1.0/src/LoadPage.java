@@ -48,7 +48,6 @@ public class LoadPage extends JPanel
 	    //UpperSection.add(new testPanel, BorderLayout.CENTER);
 	  
 	//	UpperSection.add(new SearchBar("Text File: ", "Browse"));
->>>>>>> branch 'master' of https://github.com/SacStateCSC131Fall2018/Group-12-Section-5.git
 		
 		this.setLayout(new BorderLayout());
 		this.add(UpperSection,BorderLayout.NORTH);
