@@ -11,43 +11,20 @@ public class LoadPage extends JPanel
 		
 		Container UpperSection = new Container();
 		UpperSection.setLayout(new GridLayout(3,1));
-		Container secondBar = new Container();
-		//Container secondBar = new Container();
-		
-		
-		labeledText(secondBar,"Text File Type: ");
-		
-		
-		
-		UpperSection.add(new SearchBar("Text File: ", "Browse"));
-		UpperSection.add(secondBar);
-		
-		
-		//UpperSection.add(new SearchBar("Text File: ", "Browse"));
-		//UpperSection.add(new SearchBar("Text File: ", "Browse"));
 
-	    UpperSection.add(new SearchBar("Text File: ", "Browse"));
+		//adds the first bar
+		UpperSection.add(new SearchBar("Text File: ", "Browse"),BorderLayout.NORTH);
+		
+		//adds the second bar
+		UpperSection.add(new SearchBar("Text File: "),BorderLayout.NORTH);
+
+		//adds the third bar containing the two text fields
+		Container thirdBarFull =new Container();
+		thirdBarFull.setLayout(new GridLayout(1,2));
+		thirdBarFull.add(new SearchBar("Text File: "));
+		thirdBarFull.add(new SearchBar("Text File: "));
 	  
-	    
-	    Container pane = new Container();
-	    pane.setLayout(new BorderLayout(10,10));
-	    
-	    pane.add(new Button("Left"), BorderLayout.WEST);
-	    
-	    pane.add(new Button("Center"), BorderLayout.CENTER);
-	    
-	    
-	    UpperSection.add(pane);
-	    
-	    
-	    
-	    
-	    
-	    
-	    //UpperSection.setLayout(border); //border layout for the container
-	    //UpperSection.add(new testPanel, BorderLayout.CENTER);
-	  
-	//	UpperSection.add(new SearchBar("Text File: ", "Browse"));
+		UpperSection.add(thirdBarFull);
 		
 		this.setLayout(new BorderLayout());
 		this.add(UpperSection,BorderLayout.NORTH);
@@ -55,8 +32,9 @@ public class LoadPage extends JPanel
 	}
 
 
-	public void labeledText(Container barContents,String searchName)
+	public Container createLabeledTextBox(String searchName)
 	{
+		Container barContents = new Container();
 		//initiate the search bar layout 
 		barContents.setLayout(new BorderLayout(20,20));
 		
@@ -68,7 +46,7 @@ public class LoadPage extends JPanel
 		//Query label
 		JLabel T_DISPLAY = new JLabel(searchName);
 		barContents.add(T_DISPLAY, BorderLayout.WEST);
-		
+		return barContents;
 	}
 
 }
